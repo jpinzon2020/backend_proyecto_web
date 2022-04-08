@@ -58,8 +58,8 @@ public class PoblacionController {
 	}
 	
 	
-	@PostMapping("/statesL")
-	public String createStateList(@RequestBody List<Poblacion> poblaciones) {
+	@PostMapping("/poblacionL")
+	public String createPolacionList(@RequestBody List<Poblacion> poblaciones) {
 
 		poblacionRepository.saveAll(poblaciones);
 		return "done";

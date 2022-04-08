@@ -14,6 +14,7 @@ public class Departamento {
 	
 	@Id
 	private String codigoDepartamento;
+	
 	private String nombreDepartamento;
 	
 	/*@ManyToMany(cascade = CascadeType.ALL)

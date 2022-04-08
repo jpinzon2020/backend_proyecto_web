@@ -15,12 +15,12 @@ public class NumPersona {
 	NumPersonaKey id;
 	
 	@ManyToOne
-	@MapsId("departamentoId")
+	@MapsId("departamento_id")
 	@JoinColumn(name="departamento_id")
 	Departamento departamento;
 	
 	@ManyToOne
-	@MapsId("poblacionId")
+	@MapsId("poblacion_id")
 	@JoinColumn(name="poblacion_id")
 	Poblacion poblacion;
 	
