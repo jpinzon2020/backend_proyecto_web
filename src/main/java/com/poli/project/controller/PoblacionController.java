@@ -47,7 +47,7 @@ public class PoblacionController {
 		
 	}
 	
-	@PostMapping("poblacion")
+	@PostMapping("createPoblacion")
 	public ResponseEntity<Poblacion> createPoblacion(@RequestBody Poblacion poblacion) {
 		
 		try {
@@ -86,7 +86,7 @@ public class PoblacionController {
 		
 	}
 	
-	@DeleteMapping("/poblacion")
+	@DeleteMapping("/deletePoblacion")
 	public ResponseEntity<Poblacion> deletePoblacion(@RequestParam("id") Long id) {
 		try {
 			
