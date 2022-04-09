@@ -75,7 +75,4 @@ public class Poblacion {
 		this.esNomada = esNomada;
 	} 
 	
-	
-	
-	
 }

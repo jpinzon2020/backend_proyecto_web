@@ -5,11 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.poli.project.model.Poblacion;
@@ -33,7 +36,7 @@ public class PoblacionController {
 	}
 	
 	@GetMapping("/poblaciones/{id}")
-	public ResponseEntity<Poblacion> getStateById(@PathVariable Long id) {
+	public ResponseEntity<Poblacion> getPoblacionById(@PathVariable Long id) {
 		
 		try {
 			Poblacion poblacion = poblacionRepository.findById(id).get();
@@ -65,5 +68,36 @@ public class PoblacionController {
 		return "done";
 	}
 	
+	@PutMapping("/updatePoblacion")
+	public ResponseEntity<Poblacion> updatePoblacion(@PathVariable Long id, @RequestBody Poblacion poblacionNew) {
+		
+		try {
+			Poblacion currentPoblacion = poblacionRepository.findById(id).get();
+			currentPoblacion.setCaracteristicas(poblacionNew.getCaracteristicas());
+			currentPoblacion.setEsNomada(poblacionNew.isEsNomada());
+			currentPoblacion.setNombre(poblacionNew.getNombre());
+			
+			poblacionRepository.save(currentPoblacion);
+			return ResponseEntity.status(HttpStatus.OK).body(currentPoblacion);
+			
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
+		}
+		
+	}
+	
+	@DeleteMapping("/poblacion")
+	public ResponseEntity<Poblacion> deletePoblacion(@RequestParam("id") Long id) {
+		try {
+			
+			Poblacion poblacionDB = poblacionRepository.findById(id).get();
+			poblacionRepository.delete(poblacionDB);
+			return ResponseEntity.status(HttpStatus.OK).body(poblacionDB);
+			
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
+		}
+		
+	}
 	
 } 

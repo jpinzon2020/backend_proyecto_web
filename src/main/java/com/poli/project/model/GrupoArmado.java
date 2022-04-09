@@ -16,18 +16,18 @@ public class GrupoArmado {
 	private long id;
 	private String nombre;
 	private Date anio_inicio;
-	private String ideologio;
+	private String ideologia;
 	private String descriptcion;
 	
 	public GrupoArmado() {
 		
 	}
 	
-	public GrupoArmado(String nombre, Date anio_inicio, String ideologio, String descriptcion) {
+	public GrupoArmado(String nombre, Date anio_inicio, String ideologia, String descriptcion) {
 		super();
 		this.nombre = nombre;
 		this.anio_inicio = anio_inicio;
-		this.ideologio = ideologio;
+		this.ideologia = ideologia;
 		this.descriptcion = descriptcion;
 	}
 	
@@ -43,11 +43,11 @@ public class GrupoArmado {
 	public void setAnio_inicio(Date anio_inicio) {
 		this.anio_inicio = anio_inicio;
 	}
-	public String getIdeologio() {
-		return ideologio;
+	public String getideologia() {
+		return ideologia;
 	}
-	public void setIdeologio(String ideologio) {
-		this.ideologio = ideologio;
+	public void setideologia(String ideologia) {
+		this.ideologia = ideologia;
 	}
 	public String getDescriptcion() {
 		return descriptcion;
