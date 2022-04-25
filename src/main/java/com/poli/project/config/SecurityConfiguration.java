@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import io.swagger.models.HttpMethod;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -31,11 +33,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		 	.and()
 			.csrf().disable() //Cross-Site Request Forgery (falsificación de petición en sitios cruzados) 
 			.authorizeRequests()
+			.antMatchers("/api/v1/createPoblacion").hasRole("ADMIN")
+			.antMatchers("/api/v1/poblacionL").hasRole("ADMIN")
+			.antMatchers("/api/v1/updatePoblacion").hasRole("ADMIN")
+			.antMatchers("/api/v1/deletePoblacion").hasRole("ADMIN")
 			.antMatchers("/api/v1/poblaciones").hasAnyRole("ADMIN", "USER")
-			.antMatchers("/api/v1/createPoblacion").hasAnyRole("ADMIN")
-			.antMatchers("/api/v1/poblacionL").hasAnyRole("ADMIN")
-			.antMatchers("/api/v1/updatePoblacion").hasAnyRole("ADMIN")
-			.antMatchers("/api/v1/deletePoblacion").hasAnyRole("ADMIN")
 			//auth with HTTP Methods
 			/*
 			.antMatchers(HttpMethod.GET, "/api/v1/books/**").hasRole("ADMIN")
