@@ -34,13 +34,24 @@ public class CantidadDelito {
 	public CantidadDelito() {
 		
 	}
-
 		
-	public CantidadDelito(int cantidadDelitos) {
+	public CantidadDelito(Poblacion poblacion, Delito delito, GrupoArmado grupoArmado, int cantidadDelitos) {
 		super();
+		this.grupoArmado = grupoArmado;
+		this.delito = delito;
+		this.poblacion = poblacion;
 		this.cantidadDelitos = cantidadDelitos;
 	}
+	
+	
 
+	public Poblacion getPoblacion() {
+		return poblacion;
+	}
+
+	public void setPoblacion(Poblacion poblacion) {
+		this.poblacion = poblacion;
+	}
 
 	public int getCantidadDelitos() {
 		return cantidadDelitos;
@@ -49,6 +60,21 @@ public class CantidadDelito {
 	public void setCantidadDelitos(int cantidadDelitos) {
 		this.cantidadDelitos = cantidadDelitos;
 	}
-	
+
+	public GrupoArmado getGrupoArmado() {
+		return grupoArmado;
+	}
+
+	public void setGrupoArmado(GrupoArmado grupoArmado) {
+		this.grupoArmado = grupoArmado;
+	}
+
+	public Delito getDelito() {
+		return delito;
+	}
+
+	public void setDelito(Delito delito) {
+		this.delito = delito;
+	}
 	
 }
