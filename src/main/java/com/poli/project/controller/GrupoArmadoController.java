@@ -64,13 +64,16 @@ public class GrupoArmadoController {
 		return "done";
 	}
 	
-	@PutMapping("/updateGrupoArmado")
+	@PutMapping("/updateGrupoArmado/{id}")
 	public ResponseEntity<GrupoArmado> updateGrupoArmado(@PathVariable Long id, @RequestBody GrupoArmado GrupoArmadoNew) {
 		
 		try {
 			
 			GrupoArmado currentGrupoArmado = grupoArmadoRepository.findById(id).get();
 			currentGrupoArmado.setNombre(GrupoArmadoNew.getNombre());
+			currentGrupoArmado.setAnio_inicio(GrupoArmadoNew.getAnio_inicio());
+			currentGrupoArmado.setDescriptcion(GrupoArmadoNew.getDescriptcion());
+			currentGrupoArmado.setideologia(GrupoArmadoNew.getideologia());
 			
 			grupoArmadoRepository.save(currentGrupoArmado);
 			return ResponseEntity.status(HttpStatus.OK).body(currentGrupoArmado);
@@ -81,7 +84,7 @@ public class GrupoArmadoController {
 		
 	}
 	
-	@DeleteMapping("/GrupoArmado")
+	@DeleteMapping("/GrupoArmado/{id}")
 	public ResponseEntity<GrupoArmado> deleteGrupoArmado(@RequestParam("id") Long id) {
 		
 		try {

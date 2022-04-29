@@ -55,7 +55,5 @@ public class GrupoArmado {
 	public void setDescriptcion(String descriptcion) {
 		this.descriptcion = descriptcion;
 	}
-	
-	
-	
+		
 }

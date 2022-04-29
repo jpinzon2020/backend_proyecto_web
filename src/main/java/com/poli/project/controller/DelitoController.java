@@ -66,7 +66,7 @@ public class DelitoController {
 		return "done";
 	}
 	
-	@PutMapping("/updateDelito")
+	@PutMapping("/updateDelito/{id}")
 	public ResponseEntity<Delito> updateDelito(@PathVariable Long id, @RequestBody Delito delitoNew) {
 		
 		try {
@@ -82,7 +82,7 @@ public class DelitoController {
 		
 	}
 	
-	@DeleteMapping("/delito")
+	@DeleteMapping("/delito/{id}")
 	public ResponseEntity<Delito> deleteDelito(@RequestParam("id") Long id) {
 		try {
 			

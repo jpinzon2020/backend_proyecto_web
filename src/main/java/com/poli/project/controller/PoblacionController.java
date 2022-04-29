@@ -70,7 +70,7 @@ public class PoblacionController {
 		return "done";
 	}
 	
-	@PutMapping("/updatePoblacion")
+	@PutMapping("/updatePoblacion/{id}")
 	public ResponseEntity<Poblacion> updatePoblacion(@PathVariable Long id, @RequestBody Poblacion poblacionNew) {
 		
 		try {
@@ -88,7 +88,7 @@ public class PoblacionController {
 		
 	}
 	
-	@DeleteMapping("/deletePoblacion")
+	@DeleteMapping("/deletePoblacion/{id}")
 	public ResponseEntity<Poblacion> deletePoblacion(@RequestParam("id") Long id) {
 		try {
 			
