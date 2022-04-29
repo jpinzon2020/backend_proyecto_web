@@ -38,6 +38,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.antMatchers("/api/v1/updatePoblacion").hasRole("ADMIN")
 			.antMatchers("/api/v1/deletePoblacion").hasRole("ADMIN")
 			.antMatchers("/api/v1/poblaciones").hasAnyRole("ADMIN", "USER")
+			
+			.antMatchers("/api/v1/delitoL").hasRole("ADMIN")
+			.antMatchers("/api/v1/updateDelito").hasRole("ADMIN")
+			.antMatchers("/api/v1/deleteDelito").hasRole("ADMIN")
+			.antMatchers("/api/v1/Delitos").hasAnyRole("ADMIN", "USER")
+			.antMatchers("/api/v1/delito").hasAnyRole("ADMIN", "USER")
+			
+			.antMatchers("/api/v1/GrupoArmadoL").hasRole("ADMIN")
+			.antMatchers("/api/v1/updateGrupoArmado").hasRole("ADMIN")
+			.antMatchers("/api/v1/deleteGrupoArmado").hasRole("ADMIN")
+			.antMatchers("/api/v1/GrupoArmado").hasRole("ADMIN")
+			.antMatchers("/api/v1/GrupoArmados").hasAnyRole("ADMIN", "USER")
 			//auth with HTTP Methods
 			/*
 			.antMatchers(HttpMethod.GET, "/api/v1/books/**").hasRole("ADMIN")

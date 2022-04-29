@@ -82,7 +82,7 @@ public class DelitoController {
 		
 	}
 	
-	@DeleteMapping("/delito/{id}")
+	@DeleteMapping("/deleteDelito/{id}")
 	public ResponseEntity<Delito> deleteDelito(@RequestParam("id") Long id) {
 		try {
 			

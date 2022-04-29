@@ -84,7 +84,7 @@ public class GrupoArmadoController {
 		
 	}
 	
-	@DeleteMapping("/GrupoArmado/{id}")
+	@DeleteMapping("/deleteGrupoArmado/{id}")
 	public ResponseEntity<GrupoArmado> deleteGrupoArmado(@RequestParam("id") Long id) {
 		
 		try {
