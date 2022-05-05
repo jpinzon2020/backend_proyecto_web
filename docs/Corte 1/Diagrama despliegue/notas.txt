@@ -1,0 +1,11 @@
+Nodo recurso físico que va a tener software.
+
+
+Device hardware
+
+Execution environment
+
+
+
+
+Artefactos archivos que se despliegan en el sistema jar, dll, exe, bin, config
