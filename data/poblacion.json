@@ -1,0 +1,22 @@
+[
+    {
+        "caracteristicas": "Población",
+        "esNomada": false,
+        "nombre": "Afroamericanos"
+    },
+    {
+        "caracteristicas": "Población",
+        "esNomada": true,
+        "nombre": "Indigenas"
+    },
+    {
+        "caracteristicas": "Población",
+        "esNomada": false,
+        "nombre": "Campesionos"
+    },
+    {
+	"caracteristicas": "Grupo expuesto a secuestro y trabajo forzado",
+	"esNomada": false,
+	"nombre": "Niño/niñas y adolecentes"
+    }
+]

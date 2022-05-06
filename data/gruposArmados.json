@@ -1,0 +1,26 @@
+[
+    {
+        "anio_inicio": "1964",
+        "descriptcion": "Organización guerrillera insurgente colombiana de extrema izquierda, basada en la ideología y los principios del marxismo-leninismo",
+        "ideologia": "Revolucionaria",
+        "nombre": "Las FARC"
+    },
+    {
+        "anio_inicio": "1964",
+        "descriptcion": "Organización guerrillera insurgente y terrorista​colombiana de extrema izquierda",
+        "ideologia": "Revolucionaria",
+        "nombre": "ELN"
+    },
+    {
+        "anio_inicio": "1967",
+        "descriptcion": "Organización guerrillera insurgente colombiana de extrema izquierda fundada en 1967, basada en los principios e ideologías del marxismo-leninismo",
+        "ideologia": "Revolucionaria",
+        "nombre": "EPL"
+    },
+    {
+        "anio_inicio": "2006",
+        "descriptcion": "Es un grupo armado organizado que forma parte del conflicto armado interno en Colombia",
+        "ideologia": "Revolucionaria",
+        "nombre": "AGC"
+    }
+]

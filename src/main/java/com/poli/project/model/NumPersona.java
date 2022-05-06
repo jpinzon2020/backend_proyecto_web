@@ -31,9 +31,41 @@ public class NumPersona {
 	}
 	
 	
-	public NumPersona(int numPersonas) {
+	public NumPersona(Departamento departamento, Poblacion poblacion, int numPersonas) {
 		super();
+		this.departamento = departamento;
+		this.poblacion = poblacion;
 		this.numPersonas = numPersonas;
+	}
+
+	
+	/*public NumPersonaKey getId() {
+		return id;
+	}
+
+
+	public void setId(NumPersonaKey id) {
+		this.id = id;
+	}*/
+
+
+	public Departamento getDepartamento() {
+		return departamento;
+	}
+
+
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
+	}
+
+
+	public Poblacion getPoblacion() {
+		return poblacion;
+	}
+
+
+	public void setPoblacion(Poblacion poblacion) {
+		this.poblacion = poblacion;
 	}
 
 
