@@ -9,7 +9,7 @@ import javax.persistence.Embeddable;
 public class NumPersonaKey implements Serializable {
 
 	@Column(name="departamento_id")
-	Long departamentoId;
+	String departamentoId;
 	
 	@Column(name="poblacion_id")
 	Long poblacionId;
@@ -18,17 +18,17 @@ public class NumPersonaKey implements Serializable {
 		
 	}
 	
-	public NumPersonaKey(Long departamentoId, Long poblacionId) {
+	public NumPersonaKey(String departamentoId, Long poblacionId) {
 		super();
 		this.departamentoId = departamentoId;
 		this.poblacionId = poblacionId;
 	}
 
-	public Long getDepartamentoId() {
+	public String getDepartamentoId() {
 		return departamentoId;
 	}
 
-	public void setDepartamentoId(Long departamentoId) {
+	public void setDepartamentoId(String departamentoId) {
 		this.departamentoId = departamentoId;
 	}
 

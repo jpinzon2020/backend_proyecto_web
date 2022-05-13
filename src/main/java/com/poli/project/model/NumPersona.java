@@ -31,11 +31,13 @@ public class NumPersona {
 	}
 	
 	
-	public NumPersona(Departamento departamento, Poblacion poblacion, int numPersonas) {
+	public NumPersona(NumPersonaKey key, Departamento departamento, Poblacion poblacion, int numPersonas) {
+		
 		super();
-		this.departamento = departamento;
-		this.poblacion = poblacion;
+		this.id = key;	
 		this.numPersonas = numPersonas;
+		this.departamento = departamento;
+		this.poblacion = poblacion; 
 	}
 
 	
