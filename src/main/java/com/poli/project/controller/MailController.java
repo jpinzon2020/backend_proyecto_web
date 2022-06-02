@@ -1,6 +1,7 @@
 package com.poli.project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.poli.project.model.Mail;
 import com.poli.project.service.MailService;
 
-
+@CrossOrigin(origins = "*")
 @RestController
 public class MailController {
 

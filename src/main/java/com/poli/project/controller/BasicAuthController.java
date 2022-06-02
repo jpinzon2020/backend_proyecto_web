@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.poli.project.model.AuthenticationBean;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1")
 public class BasicAuthController {
